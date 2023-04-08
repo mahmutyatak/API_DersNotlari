@@ -58,14 +58,6 @@ public class C03_JasonObjesiOlusturma {
         outerGenelJason.put("lastname","Brown");
 
         System.out.println(outerGenelJason);
-        /*
 
-        git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/mahmutyatak/API_DersNotlari.git
-git push -u origin main
-         */
     }
 }
