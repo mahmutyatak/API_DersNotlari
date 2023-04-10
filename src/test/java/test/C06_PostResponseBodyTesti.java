@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class C06_PostResponseBodyTesti {
     /*  https://jsonplaceholder.typicode.com/posts
@@ -41,9 +42,9 @@ public class C06_PostResponseBodyTesti {
         response.prettyPrint();
 
         response.then().assertThat().statusCode(201).contentType("application/json")
-                .body("title",Matchers.equalTo("API"))
-                .body("userId",Matchers.lessThan(100))
-                .body("body",Matchers.containsString("API"));
+                .body("title",equalTo("API"))
+                .body("userId",lessThan(100))
+                .body("body",containsString("API"));
 
 
     }
