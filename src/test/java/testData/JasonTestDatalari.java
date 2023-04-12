@@ -2,6 +2,10 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class JasonTestDatalari {
    public int basariliStatusKodu=200;
 
@@ -10,11 +14,30 @@ public class JasonTestDatalari {
     JSONObject expectedJason=new JSONObject();
     expectedJason.put("userId",userId);
     expectedJason.put("id",id);
-    expectedJason.put("title","dolor sint quo a velit explicabo quia nam");
-    expectedJason.put("body","eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse");
+    expectedJason.put("title","Ahmet");
+    expectedJason.put("body","Merhaba");
 
     return expectedJason;
 
+    }
+
+    public HashMap requestBodyOlusturMap(){
+     /*
+     {
+      "title":"Ahmet",
+             "body":"Merhaba",
+             "userId":10,
+             "id":70
+     }
+     */
+
+     HashMap<String,Object> requestBody=new HashMap<>();
+     requestBody.put("title","Ahmet");
+     requestBody.put("body","Merhaba");
+     requestBody.put("userId",10.0);
+     requestBody.put("id",70.0);
+
+  return requestBody;
     }
 
 
